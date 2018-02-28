@@ -1,0 +1,560 @@
+body {
+    background: #e7ffff;
+}
+@keyframes wheel-rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes foot-rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(60deg);
+    }
+    90% {
+        transform: rotateZ(360deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes chain-translate-top {
+    0% {
+        top: 51px;
+        left: -51px;
+        transform-origin: bottom left;
+        transform: rotateZ(-15deg);
+    }
+    100% {
+        top: 40px;
+        left: 0;
+        transform-origin: bottom left;
+        transform: rotateZ(-15deg);
+    }
+}
+@keyframes chain-translate-bottom {
+    0% {
+        top: 59px;
+        left: -51px;
+        transform-origin: bottom left;
+        transform: rotateZ(7deg);
+    }
+    100% {
+        top: 65px;
+        left: 0;
+        transform-origin: bottom left;
+        transform: rotateZ(7deg);
+    }
+}
+.wrapper {
+    position: absolute;
+    top: 78px;
+    left: 168px;
+    height: 282px;
+    width: 532px;
+}
+.wheel {
+    position: absolute;
+    height: 190px;
+    width: 190px;
+    border: 6px solid #aaa;
+    border-radius: 50%;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: wheel-rotate;
+    animation-timing-function: linear;
+}
+.wheel:after {
+    content: '';
+    position: absolute;;
+    bottom: 3px;
+    left: 3px;
+    height: 176px;
+    width: 176px;
+    border: 4px solid #ef9a67;
+    border-radius:  50%;
+}
+.rear-wheel {
+    left: 0;
+    bottom: 0;
+}
+.front-wheel {
+    right: 0;
+    bottom: 0;
+}
+.steel-wire {
+    position: absolute;
+    left: -6px;
+    top: 95px;
+    height: 1px;
+    width:202px;
+    background-color: #d1d3d3;
+    transform-origin: center;
+}
+.steel-wire-1 {
+    transform: rotateZ(30deg);
+}
+.steel-wire-2 {
+    transform: rotateZ(60deg);
+}
+.steel-wire-3 {
+    transform: rotateZ(90deg);
+}
+.steel-wire-4 {
+    transform: rotateZ(120deg);
+}
+.steel-wire-5 {
+    transform: rotateZ(150deg);
+}
+.steel-wire-6 {
+    transform: rotateZ(180deg);
+}
+.steel-bar {
+    position: absolute;
+    width: 10px;
+    /*background-color: #5e999b;*/
+    background: linear-gradient(to bottom,#FF493A,#FF7E03,#FEDA00,#0BD950,#3CA4FE,#557BFC,#B47DE1);
+}
+.steel-bar-real {
+    left: 108px;
+    top: 185px;
+    height: 140px;
+    transform-origin: left top;
+    transform: rotateZ(219.34deg);
+}
+.steel-bar-bottom {
+    left: 104px;
+    top: 185px;
+    height: 156px;
+    transform-origin: top left;
+    transform: rotateZ(267deg);
+}
+.steel-bar-front {
+    left: 190px;
+    top: -110px;
+    height: 178px;
+    transform-origin: bottom left;
+    transform: rotateZ(81.6deg);
+}
+.steel-bar-top {
+    left: 259px;
+    top: 178px;
+    height: 165px;
+    transform-origin: top left;
+    transform: rotateZ(226deg);
+}
+.steel-bar-bearing {
+    left: 250px;
+    top: -22px;
+    height: 196px;
+    transform-origin: bottom left;
+    transform: rotateZ(-33deg);
+}
+.steel-bar-front-bearing {
+    left: 425px;
+    top: -22px;
+    height: 200px;
+    transform-origin: bottom left;
+    transform: rotateZ(-27deg);
+}
+.steel-bar-header {
+    left: 334px;
+    top: -66px;
+    height: 60px;
+    border-radius: 0 0 5px 5px;
+    transform-origin: bottom left;
+    transform: rotateZ(90deg);
+}
+.steel-bar-header-armrest-junction {
+    position: absolute;
+    top: -6px;
+    left: 394px;
+    width: 10px;
+    height: 10px;
+    background: #666;
+}
+.steel-bar-armrest {
+    position: absolute;
+    left: 436px;
+    top: -6px;
+    width: 38px;
+    height: 22px;
+    border: 10px solid #666;
+    border-bottom: none;
+    border-radius: 38px 38px 0 0;
+    transform-origin: top left;
+    transform: rotateZ(90deg);
+}
+.cushion {
+    position: absolute;
+    left: 120px;
+    top: 0;
+    width: 74px;
+    height: 22px;
+    background: #666;
+    border-radius: 28px 30px 60px 21px/14px 5px 19px 11px;
+}
+.cages-outer {
+    position: absolute;
+    left: 300px;
+    top: 96px;
+    height: 24px;
+    width: 43px;
+    border: 3px solid #5e999b;
+    border-right: none;
+    background: #daeded;
+    transform-origin: bottom left;
+    transform: rotateZ(-44deg);
+}
+.cages-inner {
+    position: absolute;
+    left: 309px;
+    top: 88px;
+    width: 28px;
+    height: 25px;
+    border: 2px solid #5e999b;
+    background: #daeded;
+    transform-origin: bottom left;
+    transform: rotateZ(-44deg);
+}
+.kettle {
+    position: absolute;
+    left: 313px;
+    top: 61px;
+    width: 20px;
+    height: 13px;
+    border: 2px solid #9dbdbd;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0/13px 13px 0 0;
+    background: #daeded;
+    transform-origin: bottom left;
+    transform: rotateZ(45deg);
+}
+.kettle-lid {
+    position: absolute;
+    left: 334px;
+    top: 68px;
+    height: 10px;
+    width: 6px;
+    background: #6e6f6f;
+    transform-origin: bottom left;
+    transform: rotateZ(-44deg);
+}
+.front-bearing {
+    position: absolute;
+    left: 86px;
+    top: 86px;
+    padding: 2px;
+    height: 8px;
+    width: 8px;
+    border: 4px solid #666;
+    border-radius: 50%;
+    background: #666;
+    background-clip: content-box;
+}
+.real-bearing {
+    position: absolute;
+    top: 86px;
+    left: 86px;
+    padding: 2px;
+    width: 8px;
+    height: 8px;
+    border: 4px solid #666;
+    border-radius: 50%;
+    background-color: #666;
+    background-clip: content-box;
+}
+.real-bearing-gear {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #666;
+}
+.real-bearing-gear-1 {
+    left: -8px;
+    top: 2px;
+}
+.real-bearing-gear-2 {
+    left: -6px;
+    top: 10px;
+    transform: rotateZ(50deg);
+}
+.real-bearing-gear-3 {
+    left: 2px;
+    top: 14px;
+}
+.real-bearing-gear-4 {
+    left: 10px;
+    top: 12px;
+    transform: rotateZ(50deg);
+}
+.real-bearing-gear-5 {
+    left: 14px;
+    top: 1px;
+}
+.real-bearing-gear-6 {
+    left: 10px;
+    top: -6px;
+    transform: rotateZ(50deg);
+}
+.real-bearing-gear-7 {
+    left: 2px;
+    top: -8px;
+}
+.real-bearing-gear-8 {
+    left: -5px;
+    top: -5px;
+    transform: rotateZ(50deg);
+}
+.big-gear {
+    position: absolute;
+    left: 214px;
+    top: 130px;
+    width: 70px;
+    height: 70px;
+    border: 5px solid #666;
+    border-radius: 50%;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: wheel-rotate;
+    animation-timing-function: linear;
+}
+.chain-wrapper {
+    position: absolute;
+    left: 98px;
+    top: 126px;
+    width: 168px;
+    height: 86px;
+    overflow: hidden;
+}
+.big-gear-chain {
+    position: absolute;
+    width: 200px;
+    height: 0;
+    border-top: 4px dotted #666;
+}
+.big-gear-chain-top {
+    top: 40px;
+    left: 0;
+    transform-origin: bottom left;
+    transform: rotateZ(-15deg);
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: chain-translate-top;
+    animation-timing-function: linear;
+}
+.big-gear-chain-bottom {
+    top: 65px;
+    left: 0;
+    transform-origin: bottom left;
+    transform: rotateZ(7deg);
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: chain-translate-bottom;
+    animation-timing-function: linear;
+}
+.big-gear-skeleton {
+    position: absolute;
+    left: 19px;
+    top: 21px;
+    padding: 3px;
+    height: 18px;
+    width: 18px;
+    border:4px solid #666;
+    border-radius: 50%;
+}
+.big-gear-skeleton-gear {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    height: 6px;
+    width: 38px;
+    border-right: 6px solid #666;
+    background-color: transparent;
+    transform-origin: left top;
+}
+.big-gear-skeleton-gear-1 {
+
+}
+.big-gear-skeleton-gear-2 {
+    transform: rotate(13.8deg);
+}
+.big-gear-skeleton-gear-3 {
+    transform: rotateZ(27.7deg);
+}
+.big-gear-skeleton-gear-4 {
+    transform: rotateZ(41.5deg);
+}
+.big-gear-skeleton-gear-5 {
+    transform: rotateZ(55.4deg);
+}
+.big-gear-skeleton-gear-6 {
+    transform: rotateZ(69.2deg);
+}
+.big-gear-skeleton-gear-7 {
+    transform: rotateZ(83.1deg);
+}
+.big-gear-skeleton-gear-8 {
+    transform: rotateZ(96.9deg);
+}
+.big-gear-skeleton-gear-9 {
+    transform: rotateZ(110.8deg);
+}
+.big-gear-skeleton-gear-10 {
+    transform: rotateZ(124.6deg);
+}
+.big-gear-skeleton-gear-11 {
+    transform: rotateZ(138.5deg);
+}
+.big-gear-skeleton-gear-12 {
+    transform: rotateZ(152.3deg);
+}
+.big-gear-skeleton-gear-13 {
+    transform: rotateZ(166.2deg);
+}
+.big-gear-skeleton-gear-14 {
+    transform: rotateZ(180deg);
+}
+.big-gear-skeleton-gear-15 {
+    transform: rotateZ(193.8deg);
+}
+.big-gear-skeleton-gear-16 {
+    transform: rotateZ(207.7deg);
+}
+.big-gear-skeleton-gear-17 {
+    transform: rotateZ(221.5deg);
+}
+.big-gear-skeleton-gear-18 {
+    transform: rotateZ(235.4deg);
+}
+.big-gear-skeleton-gear-19 {
+    transform: rotateZ(249.2deg);
+}
+.big-gear-skeleton-gear-20 {
+    transform: rotateZ(263deg);
+}
+.big-gear-skeleton-gear-21 {
+    transform: rotateZ(276.9deg);
+}
+.big-gear-skeleton-gear-22 {
+    transform: rotateZ(290.8deg);
+}
+.big-gear-skeleton-gear-23 {
+    transform: rotateZ(304.6deg);
+}
+.big-gear-skeleton-gear-24 {
+    transform: rotateZ(318.5deg);
+}
+.big-gear-skeleton-gear-25 {
+    transform: rotateZ(332.3deg);
+}
+.big-gear-skeleton-gear-26 {
+    transform: rotateZ(346.2deg);
+}
+.big-gear-skeleton-foot {
+    position: absolute;
+    height: 16px;
+    width: 40px;
+    background-color: #666;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: foot-rotate;
+    animation-timing-function: linear;
+}
+.big-gear-skeleton-foot-1 {
+    left: -20px;
+    top: -5px;
+}
+.big-gear-skeleton-foot-2 {
+    left: 120px;
+    top: -5px;
+}
+.big-gear-skeleton-iron {
+    position: absolute;
+    height: 6px;
+    width: 70px;
+    background: #666;
+}
+.big-gear-skeleton-iron-1 {
+    left: -60px;
+    top: 10px;
+    width: 140px;
+}
+.big-gear-skeleton-iron-2 {
+    left: -24px;
+    top: 8px;
+    transform-origin: center;
+    transform: rotateZ(60deg);
+}
+.big-gear-skeleton-iron-3 {
+    left: -21px;
+    top: 8px;
+    transform: rotateZ(120deg);
+}
+.big-gear-bear {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:18px;
+    width: 18px;
+    border: 3px solid #fff;
+    background: #666;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
